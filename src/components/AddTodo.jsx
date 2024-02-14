@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo, test } from "../features/Todo/todoSlice";
+import { addTodo } from "../features/Todo/todoSlice";
 
 const AddTodo = () => {
   const dispatch = useDispatch();
@@ -8,7 +8,6 @@ const AddTodo = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addTodo(inputValue.current.value));
-    console.log(dispatch(test()));
     inputValue.current.value = "";
   };
   return (
